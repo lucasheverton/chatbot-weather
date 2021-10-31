@@ -2,7 +2,7 @@ const axios = require('axios');
 const { stripIndent } = require('common-tags');
 const { escape } = require('querystring');
 
-const appid = '590910ac0f90caafb7aadb55aa102485';
+const appid = 'my api key';
 const lang = 'pt_br';
 const unit = 'metric';
 
