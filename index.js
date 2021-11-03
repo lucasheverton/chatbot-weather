@@ -2,7 +2,7 @@ const axios = require('axios');
 const { stripIndent } = require('common-tags');
 const { escape } = require('querystring');
 
-const appid = 'my api key';
+const appid = '590910ac0f90caafb7aadb55aa102485';
 const lang = 'pt_br';
 const unit = 'metric';
 
@@ -37,11 +37,12 @@ exports.handler = function(context, event, callback) {
             let responseText = `\n\n Encontrei algumas informações 🔍 \n\n`;
             responseText +=  formata(data);
             twiml.message(responseText);
-            twiml.message("\nChatbot desenvolvido por _*Lucas Heverton*_ 💻🤙");
 	    })
 	    .catch((err) => {
 	        console.log(err);
-	       twiml.message('Não consegui encontrar, tente digitar novamente 😕');
+            twiml.message('Não consegui encontrar 😕');
+	        twiml.message('Tente digitar novamente o nome do Local.');
+	        twiml.message('Por exemplo: *Guarulhos*');
 	    })
 	    
     .then((response) => {
